@@ -25,4 +25,18 @@ hamburger.addEventListener('click', () =>{
 document.querySelectorAll(".nav-link").forEach(n =>n.addEventListener('click', () =>{
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-}))
+}));
+
+//Add a border around the current page on the navbar.
+
+document.addEventListener("DOMContentLoaded", function() {
+  var currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+
+  // Add 'active' class to the link that matches the current page
+  var link = document.getElementById(currentPage.split(".")[0] + "-link");
+  if (link) {
+    link.classList.add("navlink-active");
+  }
+});
+
+  

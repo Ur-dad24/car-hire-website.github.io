@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <!-- Custom styles for this template -->
     <link href="styles.css" rel="stylesheet" />
@@ -68,13 +68,15 @@
 
         <ul class="nav-menu">
           <li class="nav-item">
-            <a class="nav-link" id="home-link" href="index.html">Home</a>
+            <a id="home-link" class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="cars-link" href="cars.html">Cars</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="services-link" href="#services">Services</a>
+            <a class="nav-link" id="services-link" href="services.html"
+              >Services</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" id="about-link" href="about.html">About</a>
@@ -92,60 +94,34 @@
         </div>
       </nav>
     </header>
+    <main class="contact-us-main">
+      <div class="contact-container">
+        <h1>Find Us</h1>
 
-    <main>
-      <section id="services">
-        <div class="container">
-          <h3>Our Services</h3>
+        <div class="address">
+          <h3>Address</h3>
           <p>
-            At Car Hire Company, we offer a range of services to ensure a
-            seamless and enjoyable car hire experience for our customers.
+            Car Hire Company<br />
+            123 Main Street<br />
+            City, State, ZIP<br />
+            Country
           </p>
-
-          <div class="service">
-            <img src="" alt="" />
-            <h2>Car Rental</h2>
-            <p>
-              Choose from our extensive fleet of vehicles and enjoy flexible
-              rental options for any duration you need. Whether it's a day, a
-              week, or longer, we have the perfect car for your needs.
-            </p>
-          </div>
-
-          <div class="service">
-            <img src="" alt="" />
-            <h2>Airport Transfers</h2>
-            <p>
-              We provide reliable and convenient airport transfer services to
-              and from major airports. Start or end your journey without the
-              stress of arranging transportation, and travel in comfort and
-              style.
-            </p>
-          </div>
-
-          <div class="service">
-            <h2>Chauffeur Services</h2>
-            <p>
-              Experience the ultimate convenience with our professional
-              chauffeur services. Sit back, relax, and let our experienced
-              drivers take care of your transportation needs, whether it's for a
-              special event, business meeting, or sightseeing tour.
-            </p>
-          </div>
-
-          <div class="service">
-            <h2>One-Way Rentals</h2>
-            <p>
-              If you're planning a one-way trip, we offer convenient one-way
-              rental options, allowing you to pick up a car at one location and
-              drop it off at another. This flexibility gives you the freedom to
-              explore multiple destinations without worrying about returning to
-              the same location.
-            </p>
-          </div>
         </div>
-      </section>
+
+        <h3>Send us a message</h3>
+        <form action="#" method="post">
+         
+          <input type="text" id="name" name="name" required placeholder="Name"/>
+
+          <input type="email" id="email" name="email" required placeholder="Email" />
+          <input type="text" id="name" name="name" required placeholder="Phone"/>
+          <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+          <button class="contact-button" type="submit">Submit</button>
+        </form>
+      </div>
     </main>
+
     <hr />
     <footer>
       <div class="contact-us">
@@ -169,6 +145,6 @@
         ></a>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script .js"></script>
   </body>
 </html>

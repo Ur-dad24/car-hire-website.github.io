@@ -40,6 +40,7 @@ h1.hello, h3.intro{
 hr{
   width: 80%;
   justify-content: center;
+  margin-top: 7%;
 
 }
 
@@ -100,6 +101,18 @@ hr{
     left:30% ;
     list-style: none;
   }
+  nav ul li:hover{
+    transform: scale(1.1);
+    color: aquamarine;
+  }
+
+  .navlink-active{
+    padding: 3px;
+    border: 2px solid #000;
+    background-color: azure;
+    
+  }
+
   .name-container{
     
     position: absolute;
@@ -169,7 +182,7 @@ hr{
     text-align: center;
   }
   
-  /* Cars CSS Styles */
+  /* Cars Page CSS Styles */
 
 
   
@@ -203,6 +216,64 @@ hr{
   .grid-item h3, .grid-item p, .grid-item h4 {
     margin: 5px 0;
   }
+
+  /* Contact Us Page Styles */
+
+.contact-us-main{
+  margin-top: 7%;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.contact-label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 30%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  height: 200px;
+  width: 70%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-button {
+  background-color: #28fc03;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  
+}
+
+.contact-button:hover {
+  background-color: #45a049;
+}
+
+.address {
+  margin-bottom: 20px;
+}
+
+
+  
 
 
   
