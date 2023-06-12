@@ -1,0 +1,288 @@
+/* styles.css */
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: transparent;
+    width: 100%;
+  }
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5;
+    font-size: 80px;
+    color: black;
+    margin: 0;
+    
+}
+h3, h2.section-header, h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+h1.hello, h3.intro{
+  margin-right: 50px;
+}
+.hello{
+  color: #28fc03;
+}
+
+
+hr{
+  width: 80%;
+  justify-content: center;
+
+}
+
+
+
+
+
+  .navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 2%;
+    border-bottom: 1px ridge;
+    
+    
+  
+    
+  }
+
+ .nav-link {
+ 
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    color: #28fc03;
+    font-size: 20px;
+    list-style: none;
+    line-height: 2;
+    text-decoration: none;
+    transition: 0.7s ease;
+  }
+
+  .hamburger{
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+
+  }
+
+  .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border: 1px #28fc03 solid;
+    border-radius: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+   }
+   
+  
+
+  nav ul li {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    left:30% ;
+    list-style: none;
+  }
+  .name-container{
+    
+    position: absolute;
+    top: 30px;
+    left: 10%;
+  }
+.brand-name{
+  font-family: "Ubuntu", serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: black;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+.car-hire{
+  color: red;
+  text-transform: capitalize;
+}
+.name-logo{
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+  .home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 150px 100px;
+    padding: 7% 0 ;
+  }
+  .hello-plate{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    
+  }
+
+  #profile-image-container{
+    margin-right: 100px;
+  }
+
+  .profile-image{
+    width: 300px;
+    width: 300px;
+    
+  }
+
+
+.social-icon{
+  color: black;
+  margin: 20px;
+}
+.social-icon:hover{
+  color: aqua;
+  transform: scale(1.2);
+}
+  
+.contact-me{
+  margin: 0 15px 20px;
+}
+  footer {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Cars CSS Styles */
+
+
+  
+ #cars{
+  padding-top: 7%;
+  margin-top: 100px;
+ }
+  .grid-container {
+    padding-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    
+  }
+  
+  .grid-item {
+    flex: 0 0 33.33%; /* Adjust the width as needed for your grid */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .grid-item img {
+    width: 400px;
+    height: 250px; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .grid-item h3, .grid-item p, .grid-item h4 {
+    margin: 5px 0;
+  }
+
+
+  
+  
+
+ 
+  
+
+
+
+
+
+  /* ...rest of your CSS code... */
+
+/* Responsive CSS */
+@media only screen and (max-width: 1234px) {
+  .hello-plate {
+    text-align: center;
+    justify-content: center;
+  }
+  h1.hello, h3.intro{
+    margin: 0;
+  }
+
+  .profile-image{
+    margin-left: 140px;
+  }
+  
+}
+
+@media only screen and (max-width: 768px){
+  .hamburger{
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+
+
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu{
+    margin: 0;
+    position: fixed;
+    top: 0; 
+    right: 110%;
+    gap: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    height: auto;
+  }
+  .nav-item{
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin-top: 16px;
+    margin-right: auto;
+  }
+  .nav-menu.active{
+    left: 0;
+   
+  }
+  .nav-link{
+    color: #000;
+    text-align: center;
+  }
+  .bar{
+    background-color: #28fc03;
+   
+  }
+}
+
