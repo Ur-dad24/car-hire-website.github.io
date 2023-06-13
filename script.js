@@ -40,3 +40,37 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
   
+
+// Change hero background Image
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var images = [
+    'Images/big1.jpg', 
+     'Images/big3.jpg', 
+     'Images/big4.jpg', 
+     'Images/big5.jpg', 
+     'Images/big6.jpg', 
+     'Images/big7.jpg',
+     'Images/big8.jpg',
+     'Images/big9.jpg'
+    ]; 
+  var currentIndex = 0;
+  var heroSection = document.querySelector('.hero');
+
+  function preloadImages() {
+    for (var i = 0; i < images.length; i++) {
+        var img = new Image();
+        img.src = images[i];
+    }
+}
+
+  function changeBackgroundImage() {
+      currentIndex = (currentIndex + 1) % images.length; // Cycle through the images
+
+      var imageUrl = 'url(' + images[currentIndex] + ')';
+      heroSection.style.backgroundImage = imageUrl;
+  }
+  preloadImages();
+  setInterval(changeBackgroundImage, 5000); // Change image every 5 seconds
+});

@@ -15,12 +15,12 @@ html, body {
     background-color: transparent;
     width: 100%;
   }
-h1{
+.hero h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     letter-spacing: 1.5;
     font-size: 80px;
-    color: black;
+    color: #28fc03;
     margin: 0;
     
 }
@@ -29,12 +29,7 @@ h3, h2.section-header, h2{
   font-size: 2rem;
   font-weight: 700;
 }
-h1.hello, h3.intro{
-  margin-right: 50px;
-}
-.hello{
-  color: #28fc03;
-}
+
 
 
 hr{
@@ -56,6 +51,7 @@ hr{
     width: 100%;
     padding-left: 2%;
     border-bottom: 1px ridge;
+    height: 100px;
     
     
   
@@ -75,9 +71,8 @@ hr{
   }
 
   .hamburger{
-    padding: 10px;
     display: none;
-    cursor: pointer;
+    
 
   }
 
@@ -128,8 +123,11 @@ hr{
   line-height: 0.8;
   text-transform: uppercase;
 }
+
+/* Logo Section */
+
 .car-hire{
-  color: red;
+  
   text-transform: capitalize;
 }
 .name-logo{
@@ -138,30 +136,17 @@ hr{
   margin-right: 5px;
 }
 
-  .home{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 150px 100px;
-    padding: 7% 0 ;
-  }
-  .hello-plate{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: left;
-    
-  }
+.head-line{
 
-  #profile-image-container{
-    margin-right: 100px;
-  }
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: bold;
 
-  .profile-image{
-    width: 300px;
-    width: 300px;
-    
-  }
+  color: rgb(255, 0, 0);
+  font-size: medium;
+  text-transform: capitalize;
+}
+
 
 
 .social-icon{
@@ -192,23 +177,21 @@ hr{
  }
   .grid-container {
     padding-top: 3%;
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-block;
     justify-content: center;
     flex-direction: row;
     
   }
   
   .grid-item {
-    flex: 0 0 33.33%; /* Adjust the width as needed for your grid */
+    display: inline-block;
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
   }
   
   .grid-item img {
-    width: 400px;
-    height: 250px; /* Adjust the height as needed */
+    width: 300px;
     object-fit: cover;
     border-radius: 8px;
   }
@@ -289,30 +272,22 @@ textarea {
   /* ...rest of your CSS code... */
 
 /* Responsive CSS */
-@media only screen and (max-width: 1234px) {
-  .hello-plate {
-    text-align: center;
-    justify-content: center;
-  }
-  h1.hello, h3.intro{
-    margin: 0;
-  }
-
-  .profile-image{
-    margin-left: 140px;
-  }
+@media (max-width: 767px) {
+ 
   
 }
 
-@media only screen and (max-width: 768px){
+@media (max-width: 768px){
+  .nav-menu{
+    display: none;
+    
+  }
   .hamburger{
     display: block;
     position: fixed;
     right: 20px;
     top: 20px;
-
-
-  }
+   }
   .hamburger.active .bar:nth-child(2){
     opacity: 0;
   }
@@ -322,7 +297,8 @@ textarea {
   .hamburger.active .bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
   }
-  .nav-menu{
+  .nav-menu.active{
+    left: 0;
     margin: 0;
     position: fixed;
     top: 0; 
@@ -336,6 +312,7 @@ textarea {
     transition: 0.3s;
     height: auto;
   }
+
   .nav-item{
     text-align: center;
     justify-content: center;
@@ -343,10 +320,7 @@ textarea {
     margin-top: 16px;
     margin-right: auto;
   }
-  .nav-menu.active{
-    left: 0;
-   
-  }
+ 
   .nav-link{
     color: #000;
     text-align: center;
@@ -356,4 +330,80 @@ textarea {
    
   }
 }
+
+
+/* styles.css for cars */
+
+
+
+/* Hero section styles */
+.hero {
+    /* background-image: url('big1.jpg');  */
+    margin-top: 93px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 200px 0;
+    transition: background-image 3s ease-in-out;
+    
+    
+}
+
+/* .hero h1 {
+    font-size: 36px;
+    color: #fff;
+} */
+
+
+
+
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #28fc03;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+/* Car listings styles */
+.car-listings {
+
+    margin: 40px auto;
+    text-align: center;
+}
+
+.car-card {
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.car-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.car-card p {
+    margin-top: 5px;
+}
+
+.car-card .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #28fc03;
+    color: #333;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
 
