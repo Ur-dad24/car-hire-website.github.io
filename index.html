@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
@@ -98,49 +104,112 @@
     </header>
 
     <main>
-      
+      <h1>
+        Find the perfect wheels from <br />
+        our amazing fleet!
+      </h1>
+
       <!-- Hero section with a catchy headline and search form -->
       <section class="hero">
-
-        <h1>Find the perfect wheels from <br>
-           our amazing fleet!</h1>
-       
+        <div class="form-container">
+          <form action="">
+            <input type="text" name="phone" placeholder="Phone" required />
+            <label for="pickup-date"> Pick-Up Date</label>
+            <input type="date" name="pickup-date" required />
+            <label for="pickup-time">Pick-Up Time</label>
+            <input
+              type="time"
+              id="timeInput"
+              name="pickup-time"
+              pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]"
+              required
+            />
+            <label for="return-date">Return Date</label>
+            <input type="date" name="return-date" />
+            <button type="submit">Book Now</button>
+          </form>
+        </div>
       </section>
+      <hr />
 
-      <!-- Car listings section -->
-      <section class="car-listings">
-        <h2>Available Cars</h2>
-        <!-- Display car listings here -->
-        <div class="car-card">
-          <img src="Images/big1.jpg" alt="Car 1" />
-          <h3>Car Model 1</h3>
-          <p>Price: $XX/day</p>
-          <a href="#" class="btn">Rent Now</a>
+   
+
+      <!-- Services Section -->
+
+      <div class="services-heading">
+        <h1>Services</h1>
+        <div>
+          <p>
+            Don't miss out on the opportunity to explore your destination at
+            your own pace. <br />
+            Give our services a try and let us take care of your mobility
+            requirements with professionalism and reliability.
+          </p>
         </div>
-        <div class="car-card">
-          <img src="Images/big2.jpg" alt="Car 2" />
-          <h3>Car Model 2</h3>
-          <p>Price: $XX/day</p>
-          <a href="#" class="btn">Rent Now</a>
+      </div>
+      <section id="services">
+        <div class="box">
+          <img src="Images/page4_img7.jpg" alt="Image 1" />
+          <div>
+            <h3>Car Hire</h3>
+            <p>
+              Choose from our extensive fleet of vehicles and enjoy flexible
+              rental options for any duration you need. Whether it's a day, a
+              week, or longer, we have the perfect car for your needs. 1
+            </p>
+          </div>
         </div>
-        <div class="car-card">
-          <img src="Images/big2.jpg" alt="Car 2" />
-          <h3>Car Model 2</h3>
-          <p>Price: $XX/day</p>
-          <a href="#" class="btn">Rent Now</a>
+        <div class="box">
+          <img src="Images/car-keys3.jpg" alt="Image 2" />
+          <div>
+            <h3>Car Sale</h3>
+            <p>
+              Choose from our extensive fleet of vehicles and enjoy flexible
+              rental options for any duration you need. Whether it's a day, a
+              week, or longer, we have the perfect car for your needs. 2
+            </p>
+          </div>
         </div>
-        <div class="car-card">
-          <img src="Images/big2.jpg" alt="Car 2" />
-          <h3>Car Model 2</h3>
-          <p>Price: $XX/day</p>
-          <a href="#" class="btn">Rent Now</a>
+        <div class="box">
+          <img src="Images/lubricants.jfif" alt="Image 1" />
+          <div>
+            <h3>Lubricants</h3>
+            <p>
+              Choose from our extensive fleet of vehicles and enjoy flexible
+              rental options for any duration you need. Whether it's a day, a
+              week, or longer, we have the perfect car for your needs. 1
+            </p>
+          </div>
         </div>
-        <div class="car-card">
-          <img src="Images/big2.jpg" alt="Car 2" />
-          <h3>Car Model 2</h3>
-          <p>Price: $XX/day</p>
-          <a href="#" class="btn">Rent Now</a>
+        <div class="box">
+          <img src="Images/car-wash4.jpg" alt="Image 2" />
+          <div>
+            <h3>Car Wash</h3>
+            <p>
+              Choose from our extensive fleet of vehicles and enjoy flexible
+              rental options for any duration you need. Whether it's a day, a
+              week, or longer, we have the perfect car for your needs.
+            </p>
+          </div>
         </div>
+      </section>
+      <hr />
+
+      <!-- Why-Us Section -->
+
+      <div class="services-heading">
+        <h1>Why Choose Us</h1>
+        <div>
+          <p>
+            Don't miss out on the opportunity to explore your destination at
+            your own pace. <br />
+            Give our services a try and let us take care of your mobility
+            requirements with professionalism and reliability.
+          </p>
+        </div>
+      </div>
+      <section id="why-us">
+
       </section>
     </main>
 
