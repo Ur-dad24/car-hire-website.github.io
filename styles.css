@@ -16,6 +16,9 @@ header {
   background-color: transparent;
   width: 100%;
 }
+p {
+  font-weight: 300;
+}
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -39,14 +42,13 @@ hr {
 }
 
 .navbar {
-  background-color: white;
+  background-color: #f2f2f2;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding-left: 2%;
-  border-bottom: 1px ridge;
-  height: 100px;
+  height: 80px;
 }
 
 .nav-link {
@@ -55,7 +57,7 @@ hr {
   color: #333;
   font-size: 20px;
   list-style: none;
-  line-height: 2;
+  line-height: 1;
   text-decoration: none;
   transition: 0.7s ease;
 }
@@ -95,7 +97,7 @@ nav ul li:hover {
 
 .name-container {
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 10%;
 }
 .brand-name {
@@ -104,7 +106,7 @@ nav ul li:hover {
   font-size: 1.3rem;
   text-decoration: none;
   color: black;
-  line-height: 0.8;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -117,16 +119,6 @@ nav ul li:hover {
   height: 20px;
   width: 20px;
   margin-right: 5px;
-}
-
-.head-line {
-  font-family: "Roboto", sans-serif;
-  font-style: italic;
-  font-weight: bold;
-
-  color: rgb(255, 0, 0);
-  font-size: medium;
-  text-transform: capitalize;
 }
 
 .social-icon {
@@ -254,7 +246,7 @@ textarea {
   place-content: center;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
-  
+
   margin-left: 10px;
 }
 .hero input {
@@ -290,19 +282,19 @@ textarea {
 
 /* Services Section */
 
-
 #services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* grid-template-columns: repeat(2, 1fr); */
+  display: grid;
+  /* flex-wrap: wrap;
+  justify-content: center; */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   width: 90%;
   margin: 5% 0 10% 5%;
   border-radius: 10px;
 }
 
-.services-heading, .why-us-heading{
+.services-heading,
+.why-us-heading {
   width: 90%;
   margin: 5% 5% 0 10%;
   display: flex;
@@ -310,15 +302,17 @@ textarea {
   text-align: center;
   gap: 50px;
 }
-.services-heading h1, .why-us-heading h1{
+.services-heading h1,
+.why-us-heading h1 {
   color: #000;
   margin: 0;
 }
-.services-heading p, .why-us-heading p{
- font-family: 'Roboto', sans-serif;
- font-weight: 300;
- margin: 0% 0 0 10% ;
- text-align: left;
+.services-heading p,
+.why-us-heading p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0% 0 0 10%;
+  text-align: left;
 }
 
 .box {
@@ -337,10 +331,8 @@ textarea {
 
 .box h3,
 .box p {
-  margin: 0 0 5% 2% ;
+  margin: 0 0 5% 2%;
 }
-
-
 
 /* Car listings styles */
 .car-listings {
@@ -382,46 +374,82 @@ textarea {
 }
 
 /* Why Us section */
-#why-us{
+#why-us {
   width: 90%;
   margin: 5% 0 10% 5%;
-  
 }
 
-.why-us-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.why-us-container {
+  display: grid;
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
   gap: 20px;
+  margin: 5% 0 10% 5%;
 }
-.why-us-box{
-  background-color: #ccc;
+.why-us-box {
+  text-align: left;
   width: fit-content;
   border-radius: 10px;
 }
-
- img.why-us-image{
-  margin: 0;
-  height: 200px;
-  width: auto;
-  border-radius: 10px;
-  color: #28fc03;
+#services p,
+.why-us-box p,
+.why-us-box h4 {
+  font-family: "Roboto", sans-serif;
 }
 
-@media (max-width: 768px) {
+.img-box {
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+.img-box1 {
+  width: 150px;
+  height: 150px;
+  background-color: #28fc03;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
   
 }
 
-@media (max-width: 768px) {
+.fa-4x {
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
   .nav-menu {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+  .navbar {
+    height: 100px;
   }
   .hamburger {
     display: block;
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 70px;
+    top: 25px;
   }
+  .bar {
+    display: block;
+    width: 60px;
+    height: 6px;
+    border: 1px #28fc03 solid;
+    border-radius: 5px;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -461,5 +489,29 @@ textarea {
   }
   .bar {
     background-color: #28fc03;
+  }
+}
+
+/* Responsive Why Us  */
+
+@media (max-width: 1024px) {
+  #services {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .why-us-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+ 
+  .why-us-box h4 {
+    font-size: 20px;
+   
   }
 }
