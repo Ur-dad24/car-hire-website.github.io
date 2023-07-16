@@ -15,17 +15,20 @@ body {
 header {
   background-color: transparent;
   width: 100%;
+  height: 80px;
+  
 }
 p {
   font-weight: 300;
+  font-size: 1.2rem;
 }
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   letter-spacing: 1.5;
   font-size: 60px;
-  color: #000;
-  margin-top: 150px;
+  color: #28fc03;
+  margin-top: 100px;
 }
 h3,
 h2.section-header,
@@ -49,11 +52,13 @@ hr {
   width: 100%;
   padding-left: 2%;
   height: 80px;
+  display: flex;
+  justify-content: right;
 }
 
 .nav-link {
   font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
+  font-weight: 300;
   color: #333;
   font-size: 20px;
   list-style: none;
@@ -72,16 +77,14 @@ hr {
   height: 3px;
   border: 1px #28fc03 solid;
   border-radius: 5px;
-  margin: 5px auto;
+  margin: 10px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 10px;
+
   position: relative;
-  left: 30%;
   list-style: none;
 }
 nav ul li:hover {
@@ -89,11 +92,7 @@ nav ul li:hover {
   color: aquamarine;
 }
 
-.navlink-active {
-  padding: 3px;
-  border: 2px solid #000;
-  background-color: azure;
-}
+
 
 .name-container {
   position: absolute;
@@ -108,6 +107,13 @@ nav ul li:hover {
   color: black;
   line-height: 1;
   text-transform: uppercase;
+}
+.nav-menu{
+  margin: 25px 100px auto auto;
+  /* margin-right: 400px; */
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
 
 /* Logo Section */
@@ -133,11 +139,11 @@ nav ul li:hover {
 .contact-me {
   margin: 0 15px 20px;
 }
-footer {
+ footer {
   padding: 20px;
   width: 100%;
   text-align: center;
-}
+} 
 
 /* Cars Page CSS Styles */
 
@@ -234,9 +240,8 @@ textarea {
   text-align: center;
   padding: 10px 0;
   transition: background-image 3s ease-in-out;
-  border-radius: 15px;
-  width: 90%;
-  margin-left: 5%;
+  width: 100%;
+ 
 }
 .form-container {
   width: 300px;
@@ -246,8 +251,17 @@ textarea {
   place-content: center;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
+  margin-left: 70px;
+  position: relative;
+  top: -100px;
 
-  margin-left: 10px;
+}
+@media (max-width: 1024px) {
+  .form-container{
+    top: -10px;
+    left: -20px;
+  }
+  
 }
 .hero input {
   background-color: #f2f2f2;
@@ -270,22 +284,20 @@ textarea {
 
 .hero button {
   margin: 20px;
-  padding: 10px 20px;
+  padding: 20px 30px;
   background-color: #28fc03;
   color: #f2f2f2;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 /* Services Section */
 
 #services {
   display: grid;
-  /* flex-wrap: wrap;
-  justify-content: center; */
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   width: 90%;
@@ -319,7 +331,7 @@ textarea {
   text-align: left;
   display: flex;
   align-items: center;
-  background-color: #ccc;
+  background-color: rgba(204, 204, 204, 0.2);
   border-radius: 10px;
 }
 
@@ -391,6 +403,13 @@ textarea {
   text-align: left;
   width: fit-content;
   border-radius: 10px;
+  text-align: center;
+  
+}
+.why-us-box img{
+  width: 100px;
+  height: auto;
+
 }
 #services p,
 .why-us-box p,
@@ -398,54 +417,91 @@ textarea {
   font-family: "Roboto", sans-serif;
 }
 
-.img-box {
+.img-box, .img-box1 {
   width: 150px;
   height: 150px;
-  background-color: #ccc;
+  background-color: rgba(204, 204, 204, 0.2);
   border-radius: 10px;
   display: flex;
   justify-content: center;
+  padding: 30px;
 }
-.img-box1 {
-  width: 150px;
-  height: 150px;
-  background-color: #28fc03;
+
+
+/* Fleet Slider Section Styles */
+#fleet{
+  width: 90%;
+  margin: 5% 0 10% 5%;
+  
+
+}
+.showcase {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.car-box{
+  background-color: rgba(204, 204, 204, 0.2);
   border-radius: 10px;
+  margin: 20px;
+}
+
+.slider {
   display: flex;
-  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider img {
+  width: 350px;
+  height: 250px;
   
 }
 
-.fa-4x {
-  margin-top: 40px;
+.prev-btn,
+.next-btn {
+  border: none; 
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 39%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
 }
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+
+
 
 @media (max-width: 1024px) {
   .nav-menu {
     display: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  .nav-menu {
-    display: none;
-  }
-  .navbar {
-    height: 100px;
   }
   .hamburger {
     display: block;
     position: fixed;
     right: 70px;
-    top: 25px;
+    top: 15px;
   }
   .bar {
     display: block;
     width: 60px;
-    height: 6px;
-    border: 1px #28fc03 solid;
+    height: 4px;
+    border: 3px #28fc03 solid;
     border-radius: 5px;
-    margin: 7px auto;
+    margin: 10px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
@@ -454,38 +510,42 @@ textarea {
     opacity: 0;
   }
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(18px) rotate(45deg);
   }
   .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-18px) rotate(-45deg);
   }
+  
   .nav-menu.active {
-    left: 0;
-    margin: 0;
     position: fixed;
-    top: 0;
-    right: 110%;
-    gap: 0;
+    top: 56px;
+    left: 60%;
+    gap: 30px;
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    background-color: white;
-    width: 100%;
-    transition: 0.3s;
-    height: auto;
+    background-color: #28fc03;
+    height: 25%;
+    width: 40%;
+    padding: 0;
   }
+  
 
   .nav-item {
-    text-align: center;
-    justify-content: center;
     display: block;
     margin-top: 16px;
-    margin-right: auto;
+    border-bottom:1px solid #bbb;
+    
+  }
+  .nav-menu li:last-child{
+    margin-bottom: 0;
+  }
+  .nav-menu li:first-child{
+    margin-top: 0;
   }
 
   .nav-link {
     color: #000;
-    text-align: center;
   }
   .bar {
     background-color: #28fc03;
@@ -504,7 +564,7 @@ textarea {
     justify-content: space-evenly;
   }
   h1 {
-    font-size: 35px;
+    font-size: 60px;
   }
   h3 {
     font-size: 1.3rem;

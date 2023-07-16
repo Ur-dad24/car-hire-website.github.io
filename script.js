@@ -74,3 +74,110 @@ document.addEventListener('DOMContentLoaded', function() {
   preloadImages();
   setInterval(changeBackgroundImage, 5000); // Change image every 5 seconds
 });
+
+
+// Fleet Section
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const slider = document.querySelector(".slider");
+//   const prevBtn = document.querySelector(".prev-btn");
+//   const nextBtn = document.querySelector(".next-btn");
+//   const slideWidth = 750; // Width of each image in pixels
+//   let slideIndex = 0;
+//   let isSliding = false;
+//   let touchStartX = 0;
+//   let touchEndX = 0;
+
+//   prevBtn.addEventListener("click", function() {
+//     if (!isSliding) {
+//       slideIndex--;
+//       slide();
+//     }
+//   });
+
+//   nextBtn.addEventListener("click", function() {
+//     if (!isSliding) {
+//       slideIndex++;
+//       slide();
+//     }
+//   });
+
+//   slider.addEventListener("touchstart", function(event) {
+//     touchStartX = event.touches[0].clientX;
+//   });
+
+//   slider.addEventListener("touchend", function(event) {
+//     touchEndX = event.changedTouches[0].clientX;
+//     handleSwipeGesture();
+//   });
+
+//   function slide() {
+//     const maxIndex = slider.childElementCount - 1;
+//     const minTranslateX = -(maxIndex * slideWidth);
+//     const maxTranslateX = 0;
+
+//     if (slideIndex > maxIndex) {
+//       slideIndex = 0; // Wrap around to the first slide
+//     } else if (slideIndex < 0) {
+//       slideIndex = maxIndex; // Wrap around to the last slide
+//     }
+
+//     const translateX = -slideIndex * slideWidth;
+
+//     isSliding = true;
+//     slider.style.transform = `translateX(${translateX}px)`;
+
+//     slider.addEventListener("transitionend", function() {
+//       isSliding = false;
+//     });
+//   }
+
+//   function handleSwipeGesture() {
+//     const swipeThreshold = slideWidth / 2;
+//     const swipeDistance = touchEndX - touchStartX;
+
+//     if (swipeDistance > swipeThreshold) {
+//       slideIndex--;
+//       slide();
+//     } else if (swipeDistance < -swipeThreshold) {
+//       slideIndex++;
+//       slide();
+//     }
+//   }
+// });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const slider = document.querySelector(".slider");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+  const slideWidth = 700; // Width of each image in pixels
+  let slideIndex = 0;
+  let isSliding = false;
+
+  prevBtn.addEventListener("click", function() {
+    if (!isSliding && slideIndex > 0) {
+      slideIndex--;
+      slide();
+    }
+  });
+
+  nextBtn.addEventListener("click", function() {
+    if (!isSliding && slideIndex < slider.childElementCount - 1) {
+      slideIndex++;
+      slide();
+    }
+  });
+
+  function slide() {
+    const translateX = -slideIndex * slideWidth;
+
+    isSliding = true;
+    slider.style.transform = `translateX(${translateX}px)`;
+
+    slider.addEventListener("transitionend", function() {
+      isSliding = false;
+    });
+  }
+});
